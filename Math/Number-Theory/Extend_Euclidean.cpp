@@ -14,7 +14,7 @@ int Extended_Euclidean(int a, int b, int &x, int &y) {
         x = 1, y = 0;
         return a;
     }
-    int _gcd = Extend_Euclidean(b, a % b, x, y);
+    int _gcd = Extended_Euclidean(b, a % b, x, y);
     tie(x, y) = make_tuple(y, x - y * (a/b));
     return _gcd;
 }
