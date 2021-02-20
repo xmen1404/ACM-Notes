@@ -1,3 +1,4 @@
+// Extended Euclidean without recursion
 pair<int, int> Extended_Euclidean(int a, int b) {
     int x = 1, y = 0, x1 = 0, y1 = 1; // xa + yb = a1 ... x1a + y1b = b1
     while(b) {
