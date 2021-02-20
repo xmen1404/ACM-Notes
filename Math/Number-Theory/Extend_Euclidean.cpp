@@ -1,3 +1,5 @@
+// Both are tested with CF100963J
+
 pair<int, int> Extended_Euclidean_no_recursion(int a, int b) {
     int x = 1, y = 0, x1 = 0, y1 = 1; // xa + yb = a1 ... x1a + y1b = b1
     while(b) {
