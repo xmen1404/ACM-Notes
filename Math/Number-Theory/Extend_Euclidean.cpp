@@ -1,19 +1,10 @@
-int gcd(int x, int y) {
-    if(x < y) swap(x, y);
-    while(y) {
-        int tmp = x % y;
-        x = y, y = tmp;
+pair<int, int> Extended_Euclidean(int a, int b) {
+    int x = 1, y = 0, x1 = 0, y1 = 1; // xa + yb = a1 ... x1a + y1b = b1
+    while(b) {
+        int p = (a/b);
+        tie(x, x1) = mtp(x1, x - p * x1);
+        tie(y, y1) = mtp(y1, y - p * y1);
+        tie(a, b) = mtp(b, a - p * b);
     }
-    return x;
-}
-
-int Extend_Euclidean(int a, int b, int &x, int &y) {
-    if(b == 0) {
-        x = 1, y = 0;
-        return a;
-    }
-    int _gcd = Extend_Euclidean(b, a % b, x, y);
-    int tmp = x; x = y;
-    y = tmp - y * (a / b);
-    return _gcd;
+    return {x, y};
 }
