@@ -39,22 +39,12 @@ int diophantine_equation(int a, int b, int c, int lx, int rx) {
 	n0 = {n0.fi * (c / _gcd), n0.se * (c / _gcd)}; // n0.fi * a + n0.se * b = c
 	if(n0.fi > lx) {
 		int p = (n0.fi - lx) / abs(b / _gcd);
-		if((b / _gcd) > 0) {
-			n0.fi -= p * (b / _gcd);
-			n0.se += p * (a / _gcd);	
-		} else {
-			n0.fi += p * (b / _gcd);
-			n0.se -= p * (a / _gcd);
-		}
+		n0.fi -= p * abs(b / _gcd);
+		n0.se += abs(b / _gcd) / (b / _gcd) * p * (a / _gcd);
 	} else {
 		int p = (n0.fi - lx + abs(b / _gcd) - 1) / abs(b / _gcd);
-		if((b / _gcd) > 0) {
-			n0.fi += p * (b / _gcd);
-			n0.se -= p * (a / _gcd);	
-		} else {
-			n0.fi -= p * (b / _gcd);
-			n0.se += p * (a / _gcd);
-		}
+		n0.fi += p * abs(b / _gcd);
+		n0.se -= abs(b / _gcd) / (b / _gcd) * p * (a / _gcd);
 	}
 	while(n0.fi <= rx) {
 		result.pb(n0);
