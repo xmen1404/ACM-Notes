@@ -1,7 +1,7 @@
 struct Prime_checker {
-    int n;
-    vector<bool> prime;
-    vector<int> plist;
+    int n;              // find prime numbers upto n
+    vector<bool> prime; 
+    vector<int> plist;  // list of prime numbers
 
     Prime_checker(int n = 0): n(n) {
         prime.assign(n + 10, true);
