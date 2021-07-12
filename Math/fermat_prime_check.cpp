@@ -1,3 +1,4 @@
+// exist Carmichael numbers which are composite and satisfy the fermat test => need lucks to choose base a sthat gcd(a, p) != 1 
 int pw(int x, int y, int mod) {
     int res = 1;
     while(y) {
