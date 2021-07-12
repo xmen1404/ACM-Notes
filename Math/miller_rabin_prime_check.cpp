@@ -3,6 +3,7 @@
 // Check for a random base A, if A^d % n == 1 or A^d % n == -1
 // if both not satisfy => composite
 // 75% prob that a random base will test correctly if n composite
+// for 64bit integers, only need to check base A in {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}
 
 int pw(int x, int y, int mod) {
     int res = 1;
