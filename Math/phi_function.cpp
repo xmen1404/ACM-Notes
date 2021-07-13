@@ -2,7 +2,12 @@
 // p = prime        -> phi(p) = p-1
 // p=prime, k>=1    -> phi(p^k) = p^k - p^(k-1)
 // gcd(a, b) = 1    -> phi(ab) = phi(a) * phi(b)
-// gcd(a, b) != 1   -> phi(ab) = phi(a)*phi(b)*gcd(a, b)/phi(gcd(a, b))    
+// gcd(a, b) != 1   -> phi(ab) = phi(a)*phi(b)*gcd(a, b)/phi(gcd(a, b))   
+// for every d sthat d|n -> sigma(phi(d)) = n (use this to calculate phi(n) take O(nlogn)) 
+// gcd(a, m) == 1   -> a^phi(m) % m = 1
+// in case m prime  -> Fermat's little theorem: a^(m-1) % m = 1
+// a^n ≡ a^(n % ϕ(m)) (mod m)
+// gcd(x, m) != 1   -> x^n ≡ x^(ϕ(m)+[n % ϕ(m)]) (mod m)    
 
 int phi(int n) {
     // factoraization O(sqrt(n))
