@@ -13,8 +13,8 @@
 int phi(int n) {
     // factoraization O(sqrt(n))
     // lower complexity if list of prime numbers is prepared
-    int result = 1, tmp_n = n;
-    for(int i = 2; i*i <= tmp_n; i += 1) if(n % i == 0) {
+    int result = 1;
+    for(int i = 2; i*i <= n; i += 1) if(n % i == 0) {
         int factor = 1;
         while(n % i == 0) {
             factor *= i;
