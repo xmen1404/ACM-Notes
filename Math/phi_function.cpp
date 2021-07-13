@@ -10,6 +10,11 @@
 // a^n ≡ a^(n % ϕ(m)) (mod m)
 // gcd(x, m) != 1, n >= log2(m)   -> x^n ≡ x^(ϕ(m)+[n % ϕ(m)]) (mod m)
 
+// d(n) = number of divisor of n = (e1 + 1)*(e2 + 1)*...(em + 1)
+// σ(n) = sum of all divisor of n = (p1^(e1+1)-1) / (p1-1) * ...
+// d(ab) = d(a) * d(b)
+// σ(ab) = σ(a) * σ(b)
+
 int phi(int n) {
     // factoraization O(sqrt(n))
     // lower complexity if list of prime numbers is prepared
