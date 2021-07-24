@@ -1,1 +1,1 @@
-// solution for eq: ax % m = b % m (x = unknown)
+// solution for eq: ax % m = b (x = unknown)
