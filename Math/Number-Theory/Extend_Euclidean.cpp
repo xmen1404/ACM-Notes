@@ -1,3 +1,5 @@
+// find solution for ax + by = gcd(a, b)
+// For gcd(a, m)=1, to find modular inverse of a module m -> use Extended_Euclidean for: ax + my = 1 -> x = solution
 // Both are tested with CF100963J
 
 pair<int, int> Extended_Euclidean_no_recursion(int a, int b) {
